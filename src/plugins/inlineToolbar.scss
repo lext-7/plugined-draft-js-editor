@@ -1,0 +1,48 @@
+@import '../components/buttons/index';
+$input-color: #fff !default;
+
+.plugined-editor-inline-toolbar {
+    left: 50%;
+    transform: translate(-50%) scale(0);
+    position: absolute;
+    z-index: 2;
+    box-sizing: border-box;
+
+    background-color: $bg;
+    border: none;
+    font-size: 16px;
+    border-radius: $height;
+    white-space: nowrap;
+
+    .buttonWrapper {
+        display: inline-block;
+        height: $height;
+        vertical-align: top;
+
+        &:first-child .#{$plugined-editor-button} {
+            padding-left: $button-height-padding + $button-edge-extra-padding;
+            border-radius: $height 0 0 $height;
+        }
+
+        &:last-child .#{$plugined-editor-button} {
+            padding-right: $button-height-padding + $button-edge-extra-padding;
+            border-radius: 0 $height $height 0;
+        }
+    }
+
+    .button {
+        background: none;
+        outline: none;
+        border: none;
+        height: $height;
+    }
+
+    .button:hover,
+    .button:focus {
+        outline: 0;
+    }
+
+    input {
+        color: $input-color;
+    }
+}

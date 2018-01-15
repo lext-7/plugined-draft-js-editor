@@ -1,0 +1,35 @@
+.draftJsMentionPlugin__input__1Wxng {
+  height: 34px;
+  width: 220px;
+  padding: 0 12px;
+  font-size: 15px;
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+  color: #444;
+}
+
+.draftJsMentionPlugin__input__1Wxng:focus {
+  outline: none;
+}
+
+.draftJsMentionPlugin__input__1Wxng::-webkit-input-placeholder {
+  color: #888;
+}
+
+.draftJsMentionPlugin__input__1Wxng:-ms-input-placeholder {
+  color: #888;
+}
+
+.draftJsMentionPlugin__input__1Wxng::placeholder {
+  color: #888;
+}
+
+.draftJsMentionPlugin__inputInvalid__X9hHv {
+  color: #e65757;
+}
+
+.draftJsMentionPlugin__link__TQHAX {
+  color: #2996da;
+  text-decoration: underline;
+}

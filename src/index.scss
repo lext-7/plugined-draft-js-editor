@@ -1,0 +1,20 @@
+@import '~draft-js/dist/Draft.css';
+@import '~draft-js-alignment-plugin/lib/plugin.css';
+@import '~draft-js-emoji-plugin/lib/plugin.css';
+@import '~draft-js-focus-plugin/lib/plugin.css';
+@import '~draft-js-hashtag-plugin/lib/plugin.css';
+@import '~draft-js-linkify-plugin/lib/plugin.css';
+@import '~draft-js-mention-plugin/lib/plugin.css';
+@import '~draft-js-sticker-plugin/lib/plugin.css';
+@import '../lib/draft-js-anchor-plugin/lib/plugin.css';
+@import '../lib/draft-js-image-plugin/lib/plugin.css';
+@import '../lib/draft-js-undo-plugin/lib/plugin.css';
+@import '../lib/draft-js-video-plugin/lib/plugin.css';
+
+@import './components/buttons/index';
+@import './components/ColorPicker/index';
+@import './components/text-align-plugin/index';
+@import './plugins/sideToolbar';
+@import './plugins/inlineToolbar';
+@import './plugins/staticToolbar';
+@import './content';

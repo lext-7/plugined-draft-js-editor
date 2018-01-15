@@ -1,0 +1,110 @@
+@import '../buttons/index';
+
+.plugined-editor-color-picker {
+    width: 240px;
+    background: $bg;
+    border-radius: 4px;
+    overflow: hidden;
+
+
+    &-actions {
+        display: flex;
+    }
+
+    &-action {
+        cursor: pointer;
+        color: #fff;
+        display: inline-block;
+        padding: 4px 12px;
+        font-size: 16px;
+        line-height: 32px;
+        border-bottom: 2px solid $bg;
+        text-align: center;
+
+        &:hover {
+            background: #222;
+            border-bottom: 2px solid #222;
+        }
+
+        &.active {
+            border-bottom: 2px solid #fff;
+        }
+    }
+
+    &-close {
+        flex: 1;
+    }
+
+    &-cells {
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+
+    &-cell {
+        width: 14.2857%;
+        float: left;
+        box-sizing: border-box;
+        position: relative;
+
+        &:after {
+            content: '';
+            display: block;
+            padding-bottom: 100%;
+        }
+
+        &:hover {
+            border: 1px solid #d7d7d7;
+        }
+
+        &.active {
+            border: 1px solid #fff;
+        }
+
+        & > * {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-content: center;
+            align-items: center;
+        }
+
+        & svg {
+            display: block;
+            margin: 0 auto;
+            fill: #fff;
+        }
+    }
+
+    &-footer {
+        display: flex;
+        padding: 8px 6px;
+    }
+
+    &-input {
+        flex: 1;
+        font-family: Monoca, Consolas, monospace;
+        height: 24px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        padding: 4px 8px;
+        background: none;
+        outline: none;
+    }
+
+    &-ok {
+        border: none;
+        background: #1e88e5;
+        padding: 4px 10px;
+        color: #fff;
+        border-radius: 2px;
+        margin-left: 12px;
+        outline: none;
+        cursor: pointer;
+    }
+}

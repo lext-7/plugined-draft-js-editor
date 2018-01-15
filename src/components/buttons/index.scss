@@ -1,0 +1,104 @@
+$height: 48px !default;
+$bg: #000 !default;
+$svg-fill: #fff !default;
+$button-height-padding: 15px !default;
+$button-edge-extra-padding: 6px !default;
+$button-active-bg: #2f2f2f !default;
+$button-hover-bg: #2f2f2f !default;
+
+$plugined-editor-button: plugined-editor-button;
+
+html .buttonWrapper .#{$plugined-editor-button} {
+    &-text {
+        font-family: 'Helvetica', 'Open Sans', sans-serif;
+    }
+
+    background-color: $bg;
+    padding-left: $button-height-padding;
+    padding-right: $button-height-padding;
+    height: $height;
+    border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    margin: 0;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+    &[data-button-type], [data-button-type] {
+        position: relative;
+        z-index: 4;
+
+        &:after {
+            content: attr(data-button-type);
+            position: absolute;
+            bottom: $height + 16px;
+            padding: 5px 15px;
+            background: #000;
+            color: #fff;
+            border-radius: 10px;
+            font-size: 15px;
+            white-space: nowrap;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+            pointer-events: none;
+            transform: translateX(-50%);
+        }
+
+        &:hover:after {
+            bottom: $height + 4px;
+            opacity: 1;
+        }
+    }
+
+    @mixin tooltip($type, $text) {
+        &[data-button-type=#{$type}]:after,
+        [data-button-type=#{$type}]:after {
+            content: '#{$text}';
+        }
+    }
+
+    @include tooltip(inline-bold, BOLD);
+    @include tooltip(inline-italic, ITALIC);
+    @include tooltip(inline-strikethrough, STRIKETHROUGH);
+    @include tooltip(inline-code, CODE);
+    @include tooltip(inline-subscript, SUB);
+    @include tooltip(inline-superscript, SUP);
+    @include tooltip(inline-color, COLOR);
+    @include tooltip(block-header-one, H1);
+    @include tooltip(block-header-two, H2);
+    @include tooltip(block-header-three, H3);
+    @include tooltip(block-header-four, H4);
+    @include tooltip(block-header-five, H5);
+    @include tooltip(block-header-six, H6);
+    @include tooltip(block-blockquote, BLOCKQUOTE);
+    @include tooltip(block-ordered-list-item, ORDERED LIST);
+    @include tooltip(block-unordered-list-item, UNORDERED LIST);
+    @include tooltip(block-code-block, CODE BLOCK);
+    @include tooltip(align-left, ALIGN LEFT);
+    @include tooltip(align-right, ALIGN RIGHT);
+    @include tooltip(align-center, ALIGN CENTER);
+    @include tooltip(align-justify, ALIGN JUSTIFY);
+    @include tooltip(more, MORE);
+    @include tooltip(link, LINK);
+    @include tooltip(image-add, IMAGE);
+    @include tooltip(video-add, VIDEO);
+    @include tooltip(undo, UNDO);
+    @include tooltip(redo, REDO);
+
+    svg {
+        fill: $svg-fill;
+    }
+
+    &.active {
+        background-color: $button-active-bg;
+    }
+
+    &.active[data-button-type=more] svg {
+        transform: rotate(-180deg);
+    }
+}

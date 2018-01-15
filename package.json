@@ -1,0 +1,69 @@
+{
+  "name": "plugined-draft-js-editor",
+  "version": "0.1.7",
+  "description": "plugined draft js editor",
+  "keywords": [
+    "draft-js",
+    "draft-js-editor",
+    "draft-js-plugins",
+    "draft-js-plugin-editor",
+    "plugined-draft-js-editor"
+  ],
+  "main": "dist/PluginedEditor.js",
+  "scripts": {
+    "start": "webpack-dev-server --progress --colors --config ./demo/webpack.dev.js",
+    "build-gh-pages": "rm -rf ./demo-dist && webpack -p --progress --colors --config ./demo/webpack.prd.js",
+    "clean": "rm -rf dist && rm -rf dist-css",
+    "build": "npm run clean && WEBPACK_CONFIG=$(pwd)/webpack.config.js BABEL_DISABLE_CACHE=1 BABEL_ENV=production NODE_ENV=production ./node_modules/.bin/babel --out-dir='dist' src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lext.nobody@outlook.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lext-7/plugined-draft-js-editor.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "decorate-component-with-props": "^1.1.0",
+    "draft-js-alignment-plugin": "^2.0.1",
+    "draft-js-drag-n-drop-plugin": "^2.0.1",
+    "draft-js-emoji-plugin": "^2.0.1",
+    "draft-js-focus-plugin": "^2.0.1",
+    "draft-js-hashtag-plugin": "^2.0.1",
+    "draft-js-linkify-plugin": "^2.0.1",
+    "draft-js-mention-plugin": "^2.0.1",
+    "draft-js-sticker-plugin": "^2.0.1",
+    "draftjs-utils": "^0.9.1",
+    "union-class-names": "^1.0.0"
+  },
+  "peerDependencies": {
+    "draft-js": "^0.10.4",
+    "react": ">15.0.0",
+    "react-dom": ">15.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-webpack-loaders": "^0.9.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "draft-js": "^0.10.4",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
+    "immutable": "^3.8.2",
+    "node-sass": "^4.7.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  }
+}

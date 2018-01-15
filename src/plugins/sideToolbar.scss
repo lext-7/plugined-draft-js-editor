@@ -1,0 +1,114 @@
+@import '../components/buttons/index';
+
+$side-button-height: $height;
+.plugined-editor-side-toolbar {
+    position: fixed;
+
+    .blockType {
+        box-sizing: border-box;
+        background: $bg;
+        padding: 5px;
+        margin: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        border-radius: $side-button-height / 2;
+        height: $side-button-height;
+        width: $side-button-height;
+        line-height: $side-button-height;
+    }
+
+    svg {
+        fill: $svg-fill;
+        margin: 0 auto;
+    }
+
+    .spacer {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        width: 74px;
+        height: 8px;
+    }
+
+    .popup {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        background: $bg;
+        border-radius: 2px;
+        box-shadow: 0px 1px 3px 0px rgba(220, 220, 220, 1);
+        z-index: 3;
+        box-sizing: border-box;
+        width: $side-button-height;
+        margin-top: 8px;
+
+        .buttonWrapper {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+
+    .popup:after,
+    .popup:before {
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: ' ';
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .popup:after {
+        border-color: rgba(251, 251, 251, 0);
+        border-bottom-color: $bg;
+        border-width: 4px;
+        margin-left: -4px;
+    }
+    .popup:before {
+        border-color: rgba(221, 221, 221, 0);
+        border-bottom-color: $bg;
+        border-width: 6px;
+        margin-left: -6px;
+    }
+
+    .buttonWrapper {
+        position: relative;
+    }
+
+    html & .#{$plugined-editor-button} {
+        width: $side-button-height;
+        height: $side-button-height;
+        padding: 0;
+        text-align: center;
+
+        *[data-tooltip] {
+            margin: 0 auto;
+
+            &:after {
+                background: #fff !important;
+                color: $bg !important;
+                box-shadow: 0px 1px 3px 0px rgba(220, 220, 220, 1);
+            }
+        }
+    }
+
+    input {
+        $input-height: 28px;
+        font-size: 14px;
+        left: $side-button-height + 8px;
+        outline: 0;
+        background: $bg;
+        border: 0;
+        position: absolute;
+        top: $side-button-height / 2;
+        height: $input-height;
+        margin-top: - $input-height / 2;
+        padding: 0 8px;
+        border-radius: 2px;
+        color: #fff;
+    }
+}

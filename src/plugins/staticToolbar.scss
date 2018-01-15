@@ -1,0 +1,57 @@
+@import '../components/buttons/index';
+$input-color: #fff !default;
+
+.plugined-editor-static-toolbar {
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    border: none;
+    font-size: 16px;
+    border-radius: 2px;
+    background-color: $bg;
+
+    .buttonWrapper {
+        position: relative;
+        display: inline-block;
+        height: $height;
+        vertical-align: top;
+    }
+
+    .button {
+        background: none;
+        outline: none;
+        border: none;
+        height: $height;
+    }
+
+    .button:hover,
+    .button:focus {
+        outline: 0;
+    }
+
+    input {
+        color: $input-color;
+    }
+
+    .input-popup {
+        $input-height: 28px;
+        $input-width: 220px;
+        width: $input-width;
+        font-size: 14px;
+        top: - $input-height - 6px;
+        left: 0;
+        outline: 0;
+        background: $bg;
+        border: 0;
+        position: absolute;
+        height: $input-height;
+        padding: 0 8px;
+        border-radius: 2px;
+        color: #fff;
+        box-sizing: border-box;
+    }
+
+    .plugined-editor-color-picker {
+        position: absolute;
+    }
+}
