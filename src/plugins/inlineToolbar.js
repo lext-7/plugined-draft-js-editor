@@ -4,7 +4,7 @@ import Plugin from '../PluginEditor/plugin';
 import createInlineToolbarPlugin from '../../lib/draft-js-inline-toolbar-plugin/lib';
 
 import { createButtons } from './buttons';
-import './inlineToolbar.scss';
+// import './inlineToolbar.scss';
 
 const buttonNames = [
     'bold',

@@ -54,7 +54,7 @@ const addButtonWrapper = (ChildComponent) => class extends PureComponent {
 export const buttons = {
     bold: BoldButton,
     italic: ItalicButton,
-    underliner: UnderlineButton,
+    underline: UnderlineButton,
     strikethrough: StrikethroughButton,
     h1: HeaderOneButton,
     h2: HeaderTwoButton,

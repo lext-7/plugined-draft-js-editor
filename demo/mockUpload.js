@@ -16,7 +16,7 @@ export default function mockUpload({ files }, success, failed, progress) {
                             failed([{ id }]);
                         } else {
                             alert('upload finished');
-                            success([{ id, src }]);
+                            success([{ id, src: 'http://i.imgur.com/HYXFLl7.jpg' }]);
                         }
                         becomeFailed = !becomeFailed;
                     });

@@ -2,24 +2,9 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { getSelectedBlocksMetadata, setBlockData } from 'draftjs-utils';
 import unionClassNames from 'union-class-names';
+import StatefulButton from '../../../lib/draft-js-buttons/lib/utils/StatefulButton';
 
-export default ({ children, blockDataKey, blockDataValue, buttonType }) => class extends PureComponent {
-
-    componentDidMount() {
-        const { store } = this.props;
-        if (store) {
-            store.subscribeToItem(blockDataKey, this.onChange);
-        }
-    }
-
-    componentWillUnmount() {
-        const { store } = this.props;
-        if (store) {
-            store.unsubscribeFromItem(blockDataKey, this.onChange);
-        }
-    }
-
-    onChange = () => this.forceUpdate();
+export default ({ children, blockDataKey, blockDataValue, buttonType }) => class extends StatefulButton {
 
     preventBubblingUp = event => {
         event.preventDefault();
@@ -30,7 +15,6 @@ export default ({ children, blockDataKey, blockDataValue, buttonType }) => class
         const { getEditorState, setEditorState, store } = this.props;
         const isActive = this.isActive();
         setEditorState(setBlockData(getEditorState(), { [blockDataKey]: isActive ? undefined : blockDataValue }));
-        store.updateItem(blockDataKey, blockDataValue);
     };
 
     isActive = () => getSelectedBlocksMetadata(

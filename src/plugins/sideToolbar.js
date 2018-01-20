@@ -6,7 +6,7 @@ import BlockTypeSelect from '../../lib/draft-js-side-toolbar-plugin/lib/componen
 
 import { createButtons } from './buttons';
 
-import './sideToolbar.scss';
+// import './sideToolbar.scss';
 
 const buttonNames = [
     'image',

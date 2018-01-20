@@ -1,6 +1,6 @@
 {
   "name": "plugined-draft-js-editor",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "plugined draft js editor",
   "keywords": [
     "draft-js",
@@ -22,10 +22,11 @@
     "type": "git",
     "url": "https://github.com/lext-7/plugined-draft-js-editor.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "classnames": "^2.2.5",
     "decorate-component-with-props": "^1.1.0",
+    "draft-convert": "^2.0.1",
     "draft-js-alignment-plugin": "^2.0.1",
     "draft-js-drag-n-drop-plugin": "^2.0.1",
     "draft-js-emoji-plugin": "^2.0.1",

@@ -2,7 +2,7 @@ import React from 'react';
 import createBlockDataButton from './createBlockDataButton';
 
 export const TextAlignLeftButton = createBlockDataButton({
-    blockDataKey: 'text-align',
+    blockDataKey: 'textAlign',
     blockDataValue: 'left',
     buttonType: 'align-left',
     children: (
@@ -19,7 +19,7 @@ export const TextAlignLeftButton = createBlockDataButton({
 });
 
 export const TextAlignCenterButton = createBlockDataButton({
-    blockDataKey: 'text-align',
+    blockDataKey: 'textAlign',
     blockDataValue: 'center',
     buttonType: 'align-center',
     children: (
@@ -36,7 +36,7 @@ export const TextAlignCenterButton = createBlockDataButton({
 });
 
 export const TextAlignRightButton = createBlockDataButton({
-    blockDataKey: 'text-align',
+    blockDataKey: 'textAlign',
     blockDataValue: 'right',
     buttonType: 'align-right',
     children: (
@@ -53,7 +53,7 @@ export const TextAlignRightButton = createBlockDataButton({
 });
 
 export const TextAlignJustifyButton = createBlockDataButton({
-    blockDataKey: 'text-align',
+    blockDataKey: 'textAlign',
     blockDataValue: 'justify',
     buttonType: 'align-justify',
     children: (

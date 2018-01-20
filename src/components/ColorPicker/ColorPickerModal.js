@@ -36,7 +36,7 @@ export default class ColorPickerModal extends PureComponent {
     }
 
     static getCurrentColors(styles, types) {
-        return this.getCurrentColorStyles(styles, types, (style, typeReg) => `#${style.replace(typeReg, '')}`);
+        return this.getCurrentColorStyles(styles, types, (style, typeReg) => `${style.replace(typeReg, '')}`);
     }
 
     static hasColorStyle(editorState) {
@@ -65,7 +65,7 @@ export default class ColorPickerModal extends PureComponent {
 
         const { type } = this.state;
 
-        const targetStyle = color ? `${type}-${color.toUpperCase().replace(/^#/, '')}` : null;
+        const targetStyle = color ? `${type}-${color.toUpperCase()}` : null;
         const removedStyles = this.constructor.getCurrentColorStyles(currentStyle, [type])[type];
         for (const style of removedStyles) {
             if (style !== targetStyle) {
@@ -92,6 +92,12 @@ export default class ColorPickerModal extends PureComponent {
     applyColorFromInput = () => {
         const { input } = this.state;
         if (/^#[0-9a-fA-F]{6}$/.test(input)) {
+            this.applyColor(input);
+        }
+        if (/^rgb((\s*\d+\s*,){2}\s*\d+\s*$)/) {
+            this.applyColor(input);
+        }
+        if (/^rgba((\s*\d+\s*,){3}\s*\d+\s*$)/) {
             this.applyColor(input);
         }
     }

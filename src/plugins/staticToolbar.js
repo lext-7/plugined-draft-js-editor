@@ -4,7 +4,7 @@ import Plugin from '../PluginEditor/plugin';
 import createStaticToolbarPlugin from '../../lib/draft-js-static-toolbar-plugin/lib';
 
 import { createButtons, toolbarTypes } from './buttons';
-import './staticToolbar.scss';
+// import './staticToolbar.scss';
 
 const buttonNames = [
     'bold',
