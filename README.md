@@ -14,6 +14,8 @@ If you want to use a plugin supported by `plugined-draft-js-editor`, just add it
 ```jsx
 import Editor from 'plugined-draft-js-editor';
 
+import { editorStateToHtml, editorStateFromHtml } from 'plugined-draft-js-editor/dist/convert';
+
 class App extends PureComponent {
     constructor(props) {
         super(props);
@@ -77,3 +79,11 @@ const plugins = [
 ```
 
 Add plugin names to plugin list, than you can use it without any other code.
+
+### Convert
+
+Haved provided some convert functions.
+
+```javascript
+import { editorStateToHtml, editorStateFromHtml } from 'plugined-draft-js-editor/dist/convert';
+```
